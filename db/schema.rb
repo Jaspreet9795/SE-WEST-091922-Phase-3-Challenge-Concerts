@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_26_124532) do
+ActiveRecord::Schema.define(version: 2022_11_10_171726) do
 
   create_table "bands", force: :cascade do |t|
     t.string "name"
     t.string "hometown"
+  end
+
+  create_table "concerts", force: :cascade do |t|
+    t.string "date"
+    t.integer "band_id"
+    t.integer "venue_id"
+    t.index ["band_id"], name: "index_concerts_on_band_id"
+    t.index ["venue_id"], name: "index_concerts_on_venue_id"
   end
 
   create_table "venues", force: :cascade do |t|

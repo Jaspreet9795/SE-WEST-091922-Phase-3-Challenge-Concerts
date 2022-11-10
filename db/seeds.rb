@@ -21,4 +21,6 @@ puts "Creating Concerts..."
 # ****************************************************************
 # Create concerts Here
 
+Concert.create(date: "12/05/2022", band: ny_band, venue: nyc_venue )
+Concert.create(date: "10/09/2022", band: la_band, venue: la_venue )
 puts "Seeding done!"
